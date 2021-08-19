@@ -1,0 +1,143 @@
+ body {
+  overflow-x: hidden;
+ 
+} 
+
+.nav-item{
+  font-size: 20px !important;
+  color: #f9b52d !important;
+  font-weight: bold;
+}
+.first .nav-item a{
+  color: #f9b52d !important;
+}
+.second {
+  border: 1px solid gray !important;
+  margin-top: 20px !important;
+  margin-left: 80px !important;
+  margin-right: 80px !important;
+  border-radius: 10px;
+  padding: 2px !important;
+  overflow-x: hidden;
+}
+
+.second .nav-item {
+  border-left: 1px solid gray;
+}
+
+.circle-box {
+  margin-top: 20px;
+  margin-left: 80px !important;
+  margin-right: 80px !important;
+  padding: 100px;
+  border: 1px solid gray !important;
+  border-radius: 5px;
+}
+
+.circle {
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  border: 10px solid #f9b52d;
+  padding: 10px;
+  margin-right: 50px;
+}
+
+
+a {
+  text-decoration: none !important;
+}
+
+.head{
+  padding: 1px !important;
+}
+
+
+.adjust{
+  margin-top: -150px;
+  border-radius: 10px;
+  padding: 5px 3px 3px;
+  color: #fff;
+
+}
+
+.adjust1{
+  margin-top: -190px;
+  border-radius: 10px;
+  padding: 5px 3px 3px;
+  color: #fff;
+
+}
+.adjust2{
+  margin-top: -150px;
+  border-radius: 10px;
+  padding: 5px 3px 3px;
+  color: #fff;
+
+}
+
+.column{
+  margin-left: 440px;
+  border-radius: 10px;
+  padding: 5px 3px;
+  color: #fff;
+  margin-top: -30px;
+}
+
+
+@media (max-width: 767px) {
+  .body{
+    overflow-x: hidden !important;
+  }
+  .second {
+    border: 1px solid gray !important;
+    margin-top: 20px !important;
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+    border-radius: 10px;
+    padding: 2px !important;
+  }
+
+  
+.circle-box {
+  margin-top: 20px;
+  margin-left: 0px !important;
+  padding: 100px;
+  border: 1px solid #fff !important;
+  border-radius: 5px;
+}
+
+  .circle {
+    margin-top: -50px;
+    width: 200px;
+    height: 200px;
+    margin-left: -40px !important;
+    margin-right: 300px !important;
+    border-radius: 50%;
+    border: 10px solid #f9b52d;
+    padding: 10px;
+  }
+ 
+  .second .nav-item {
+    border-left: 1px solid gray;
+    font-size: 12px !important;
+  }
+
+  .adjust1{
+    margin-top: 90px !important;
+    border-radius: 10px;
+    padding: 5px 3px 3px;
+    color: #fff;
+  
+  }
+  .adjust2{
+    margin-top: 50px !important;
+    border-radius: 10px;
+    padding: 5px 3px 3px;
+    color: #fff;
+  
+  }
+  
+  
+
+}
