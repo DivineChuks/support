@@ -205,6 +205,21 @@ a {
   .body {
     overflow-x: hidden !important;
   }
+
+  .firstChat {
+    background-color: #e5e5e5;
+    padding: 3rem 5rem;
+    margin-left: 8rem;
+    border-radius: 1rem;
+  }
+
+  .secondChat {
+    background-color: #f7aa34;
+    padding: 3rem 5rem;
+    border-radius: 1rem;
+    margin-right: 8rem;
+  }
+
   #sidebar {
     display: none;
   }
