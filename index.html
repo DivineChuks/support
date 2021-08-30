@@ -11,15 +11,129 @@
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="font/css/fontawesome.min.css">
     <title>Fund Scrypt</title>
+    <style>
+
+        .custom_disabled {
+            pointer-events: none;
+            opacity: 0.5;
+            /*background: #CCC;*/
+        }
+
+        .switch  input[type=checkbox]{
+            height: 0;
+            width: 0;
+            visibility: hidden;
+        }
+
+        .switch label {
+            cursor: pointer;
+            text-indent: -9999px;
+            width: 80px;
+            height: 40px;
+            background: grey;
+            display: block;
+            border-radius: 40px;
+            position: relative;
+        }
+
+        .switch  label:after {
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: 5px;
+            width: 30px;
+            height: 30px;
+            background: #fff;
+            border-radius: 40px;
+            transition: 0.3s;
+        }
+
+        /* .switch  input:checked + label {
+            background: #55d3da;
+        } */
+
+        .switch  input:checked + label:after {
+            left: calc(100% - 5px);
+            transform: translateX(-100%);
+        }
+
+        .switch label:active:after {
+            width: 30px;
+        }
+
+        /*body {*/
+        /*    display: flex;*/
+        /*    justify-content: center;*/
+        /*    align-items: center;*/
+        /*    height: 100vh;*/
+        /*}*/
+    </style>
 </head>
 <body style="background-color: #1a2035;">
 
 <!--Navigation-->
 
+<nav class="first navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">
+            <img class="logo" src="images/fundscypt.png" width="140" height="35" style="margin-left: -25px;" alt="">
+            <a href="#" class="sidebarCollapse ml-2" id="collapse"><i class="fas fa-bars ml-3" style="color: white; width: 60px;"></i></a>
+        </a>
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item text-white mr-3 mt-2">
+              <a href="https://online.fundscrypt.com/register" class="btn btn-success text-white btn-md">Verified</a>
+          </li>
+          <li class="nav-item mr-3 mt-2">
+            <div class="mx-auto switch custom_disabled " @click="turnTrader">
+                <input type="checkbox" checked disabled id="switch" /><label for="switch">Toggle</label>
+            </div>
+          </li>
+          <li class="nav-item text-white mt-2">
+            <span class="language">
+            <img src="images/download.png" style="width: 25px;" class="mr-2">
+            select language <i class="fas fa-sort-down"></i>
+        </span>
+        </li>
+          <li class="dropdown align-self-center ml-2 d-inline-block mt-1">
+            <a href="#" class="nav-link px-2" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-bell h4"></i>
+                <span class="badge badge-default"> <span class="ring">
+                            </span><span class="ring-point">
+                            </span> </span>
+            </a>
+            <ul class="dropdown-menu dropdown-menu-right border py-0">
+                <li><a class="dropdown-item text-center py-2" href="#"> <strong>No Notification </strong></a></li>
+            </ul>
+        </li>
+        
+        <li class="dropdown user-profile d-inline-block py-1 mt-1">
+            <a href="#" class="nav-link px-2" data-toggle="dropdown" aria-expanded="false"><i class="fa fa-user h4"></i>
+                <span class="badge badge-default"> <span class="ring">
+                    </span><span class="ring-point">
+                    </span> </span>
+            </a>
+
+            <div class="dropdown-menu  dropdown-menu-right p-0">
+                <a href="#" class="dropdown-item px-2 align-self-center d-flex">
+                    <span class="icon-pencil mr-2 h6 mb-0"></span> Change Password</a>
+                <a href="#" class="dropdown-item px-2 align-self-center d-flex">
+                    <span class="icon-user mr-2 h6 mb-0"></span> Account Settings</a>
+                <div class="dropdown-divider"></div>
+                <a  onclick="event.preventDefault();
+                                             document.getElementById('logout-form').submit();" href="https://online.360investhub.com/logout" class="dropdown-item px-2 text-danger align-self-center d-flex">
+                    <span class="icon-logout mr-2 h6  mb-0"></span> Log Out
+                </a>
+                <form id="logout-form" action="https://online.360investhub.com/logout" method="POST" class="d-none">
+                    <input type="hidden" name="_token" value="T9GZd2OvYRiJxZujtqOr8xwJyleqrP6B22YA3uAe">                        </form>
+            </div>
+        </li>
+        </ul> 
+    </div>
+  </nav>
+
 <div class="wrapper">
     <nav id="sidebar">
-        <ul class="list-unstyled components">
-            <li class="active mb-3">
+        <ul class="list-unstyled components active">
+            <li class="mb-3">
                 <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Name</a>
                 <hr class="line">
                 <ul class="collapse list-unstyled" id="homeSubmenu">
@@ -40,7 +154,7 @@
         </ul>
     </nav>
 
-<div id="content">
+    <div id="content">
     
         <div class="container">
             <div class="row">
@@ -92,21 +206,30 @@
                         <button type="submit" class="btn text-white mb-5 send" style="background-color:#f7AA3B;">SEND <i class="fa fa-image"></i></button>
                     </form>
                 </div>
-
             </div>
     </div>
+    <footer id="footer" style="background-color: #0b0e11;" class="p-2">
+        <div class="text-center text-white">
+            <p>&copy; Copyright 2021 FundScrypt All Right Reserved</p>
+        </div>
+      </footer>
 </div>
+
+ 
   <script src="js/jquery.min.js"></script>
    <!-- Popper JS -->
 <script src="js/popper.min.js"></script>
    <!-- Latest compiled JavaScript -->
 <script src="js/bootstrap.min.js"></script>
+
+<script>
+    $(document).ready(function(){
+        $("#sidebarCollapse").on('click', function(){
+            $("#sidebar").toggleClass('active')
+        })
+    })
+</script>
+
 <body>
-    
 
-
-
-
-
-</body>
 </html>

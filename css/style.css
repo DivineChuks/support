@@ -33,14 +33,30 @@ body {
   padding: 20px 0;
   margin-left: 10px;
 }
+.hide {
+  margin-left: -100px;
+}
+.first {
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2) !important;
+}
 
+.switch {
+  margin-top: -30px;
+}
 .dashboard {
   background-color: white;
   padding: 3px 10px;
   margin: 0 5px;
   border-radius: 5px;
 }
-
+.language {
+  background-color: white;
+  color: #8d9498 !important;
+  font-size: 14px;
+  padding: 5px 10px;
+  padding-bottom: 5px;
+  cursor: pointer;
+}
 .dashboard a {
   color: #1a2035 !important;
   font-size: 11px;
@@ -131,10 +147,6 @@ ul ul a {
   font-weight: bold;
 }
 
-.first .nav-item a {
-  color: #f9b52d !important;
-}
-
 .second {
   border: 1px solid gray !important;
   margin-top: 20px !important;
@@ -201,9 +213,27 @@ a {
   border-top: 2px solid grey !important;
 }
 
+#footer {
+  position: absolute;
+  bottom: -100;
+  width: 100%;
+}
+
+.active {
+  margin-left: 0;
+}
+
 @media (max-width: 767px) {
   .body {
     overflow-x: hidden !important;
+  }
+
+  #sidebar {
+    margin-left: -250px;
+  }
+
+  #sidebar.active {
+    margin-left: 0;
   }
 
   .firstChat {
