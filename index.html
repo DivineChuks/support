@@ -12,99 +12,90 @@
     <link rel="stylesheet" href="font/css/fontawesome.min.css">
     <title>Fund Scrypt</title>
 </head>
-<body>
+<body style="background-color: #1a2035;">
 
 <!--Navigation-->
 
-<nav class="first navbar navbar-expand-lg navbar-light mb-5" style="background-color: white !important;">
-    <div class="container">
-        <a class="navbar-brand" href="#">
-            <img class="logo" src="images/FundsCrypt (1).jpg" width="150" height="35"  alt="">
-        </a>
-        <button class="navbar-toggler" data-toggle="collapse" data-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <ul class="navbar-nav text-center ml-auto">
-                <li class="nav-item">
-                    <a href="#Support" class="nav-link">About</a>
-                </li>
-                <li class="nav-item mr-2">
-                    <a href="#Support" class="nav-link">Support</a>
-                </li>
-                <li class="dropdown" style="background-color:#f9b52d ;">
-                    <a class="btn btn-sm nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                      MARK BRENNAN
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                      <a class="dropdown-item" href="#">Verification</a>
-                      <a class="dropdown-item" href="#">Security</a>
-                      <a class="dropdown-item" href="#">Preferred Currency</a>
-                      <a class="dropdown-item" href="#">Notification</a>
-                      <div class="dropdown-divider"></div>
-                      <a class="dropdown-item" href="#">Login</a>
-                    </div>
-                  </li>
-            </ul>
-        </div>
-    </div>
-  </nav>
+<div class="wrapper">
+    <nav id="sidebar">
+        <ul class="list-unstyled components">
+            <li class="active mb-3">
+                <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false" class="dropdown-toggle">Name</a>
+                <hr class="line">
+                <ul class="collapse list-unstyled" id="homeSubmenu">
+                    <li class="account">
+                        <a href="#">Account Settings</a>
+                    </li>
+                </ul>
+            </li>
+            <li class="dashboard">
+                <a href="#"><i class="fas fa-home"></i>  Dashboard</a>
+            </li>
+            <li class="trans">
+                <a href="#"><i class="fa fa-briefcase"></i>  Transaction History</a>
+            </li>
+            <li class="support">
+                <a href="#"><i class="fa fa-life-ring"></i> Support</a>
+            </li>
+        </ul>
+    </nav>
 
-  <div class="container">
-    <div class="row mb-5">
-        <div class="col-12">
-            <h4 class="text-dark">We are here to help you but it is not a live chat</h4>
-        </div>
-    </div>
+<div id="content">
 
-    <div class="row mb-5">
-        <div class="col-12">
-            <h4 class="text-dark">Type your message here</h4>
+        <div class="row mb-5 message">
+            <div class="col-12">
+                <h4 class="ml-3" style="color: #8d9498 ">We are here to help you but it is not a live chat</h4>
+            </div>
         </div>
-    </div>
-  </div>
-  
-  <div class="container">
-    <div class="row">
-        <div class="col-md-6">
-            <form>
-                <div type="text" class="input-group input-group-lg mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">
-                            <i class="fas fa-user"></i>
-                        </span>
-                    </div>
-                    <input type="text" class="form-control form-control-lg shadow-none" placeholder="Enter Name">
-                </div>
-                <div type="text" class="input-group input-group-lg mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">
-                            <i class="fas fa-envelope"></i>
-                        </span>
-                    </div>
-                    <input type="email" class="form-control form-control-lg shadow-none" placeholder="Enter Email">
-                </div>
-                <div type="text" class="input-group input-group-lg mb-3">
-                    <div class="input-group-prepend">
-                        <span class="input-group-text">
-                            <i class="fas fa-pencil-alt"></i>
-                        </span>
-                    </div>
-                    <textarea type="text" class="form-control shadow-none" rows="5" placeholder="Enter Message"></textarea>
+
+        <div class="row mb-5">
+            <div class="col-12">
+                <h4 class="ml-3" style="color: #8d9498 ">Type your message here</h4>
+            </div>
+        </div>
+        
+        
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8">
+                    <form>
+                        <div type="text" class="input-group input-group-lg">
+                            <div class="input-group-append">
+                                <span class="input-group-text">
+                                    <i class="fas fa-image"></i>
+                                </span>
+                            </div>
+                            <input class="read form-control shadow-none" type="text" placeholder="" readonly>    
+                        </div>
+                        <div type="text" class="form-group mb-3">
+                                <textarea type="text" class="form-control shadow-none" rows="4" placeholder="Enter Message"></textarea>
+                        </div>
+                        <button type="submit" class="btn text-white mb-5 send" style="background-color:#f7AA3B;">SEND <i class="fa fa-upload"></i></button>
+                    </form>
                 </div>
 
-                <input type="submit" value="Submit" class="btn btn-block text-dark mb-5" style="background-color:#f9b52d;">
-            </form>
-        </div>
+            </div>
+        <div class="container">
+                <div class="row">
+                        <div class="col-md-6">
+                            <h2 style="color: #8d9498">Chat History</h2>
+                            <div id="topBorder" class="border-top border-secondary mx-auto my-3 w-100"></div>
+                        </div>
+                    </div>
+            </div>
+            <div class="row">
+                    <div class="col-md-6">
+                        <div class="secondChat mb-3">
+                            
+                        </div>
+                        <div class="firstChat mb-5">
+                            
+                        </div>
+                    </div>
+            </div>
+        </div> 
     </div>
-  </div>
-
-  <footer style="background-color: #0b0e11;" class="p-2">
-    <div class="text-center text-white mt-2">
-        <p>&copy; Copyright 2021 FundScrypt All Right Reserved</p>
-    </div>
-  </footer>
-
+</div>
   <script src="js/jquery.min.js"></script>
    <!-- Popper JS -->
 <script src="js/popper.min.js"></script>
